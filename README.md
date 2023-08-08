@@ -16,3 +16,30 @@ A scripting language to control Raspberry Pi with comfyPi
 </div>
 
 **`A more elegant approach to Raspberry Pi`**
+
+## Single-color LED
+```
+Usage:
+python3 LED/led.py [ledPin] [ledStatus]
+  where:
+    ledPin: LED power pin (BCM pinout)
+    ledStatus: 1/0 or GPIO.HIGH/GPIO.LOW
+```
+
+## RGB LED
+```
+Usage:
+python3 LED/RGB_led.py [redPin] [greenPin] [bluePin] [redStatus][greenStatus] [blueStatus]
+  where:
+    redPin, greenPin & bluePin: pins for red, green & blue terminals (BCM pinout)
+    redStatus, greenStatus, blueStatus: 1/0 or GPIO.HIGH/GPIO.LOW
+```
+
+## Servo motor
+```
+Usage:
+python3 servo/angle.py [controlPin] [angle]
+  where:
+    controlPin: pinout to control servo PWM (BCM layout)
+    angle: desired angle (0-180 or 0-360)
+```
