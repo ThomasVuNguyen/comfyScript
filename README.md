@@ -34,6 +34,7 @@ python3 LED/led.py [ledPin] [ledStatus]
 <div id="header" style="float: left;" >
   <img src="assets/RGBLED.png" width="40"/>
 </div>
+
 ```
 Usage:
 python3 LED/RGB_led.py [redPin] [greenPin] [bluePin] [redStatus][greenStatus] [blueStatus]
@@ -46,6 +47,7 @@ python3 LED/RGB_led.py [redPin] [greenPin] [bluePin] [redStatus][greenStatus] [b
 <div id="header" style="float: left;" >
   <img src="assets/servo.png" width="40"/>
 </div>
+
 ```
 Usage:
 python3 servo/angle.py [controlPin] [angle]
@@ -58,6 +60,7 @@ python3 servo/angle.py [controlPin] [angle]
 <div id="header" style="float: left;" >
   <img src="assets/dht11.png" width="40"/>
 </div>
+
 ```
 Usage:
 python3 DHT/dht_temp.py [sensor type] [pinout]   -> temperature (C)
