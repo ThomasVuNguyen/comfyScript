@@ -69,3 +69,16 @@ python3 DHT/dht_humid.py [sensor type] [pinout]   -> relative humidity
     sensor type: 11,22, or 2302
     pinout: pinout to read sensor
 ```
+
+## Stepper Motor (In Progress)
+<div id="header" style="float: left;" >
+  <img src="assets/stepper-motor.png" width="40"/>
+</div>
+
+```
+Usage:
+python3 stepper/stepper.py [pin1] [pin2] [pin3] [pin4]
+
+  where:
+    [pin1] to [pin4]: pins 1 -> 4 (ULN2003 driver board)
+```
