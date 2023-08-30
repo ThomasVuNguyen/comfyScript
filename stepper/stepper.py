@@ -36,7 +36,7 @@ class Stepper:
                 time.sleep(0.1)
             GPIO.cleanup()
             
-        def rotate(self, direction): #direction is 1 or 0 - clickwise or counter clockwise
+        def rotate(self, direction): #direction is 1 or -1 - clickwise or counter clockwise. if direction is 0 -> stop
             self.setupMotor()
             step_counter = 0
             i = 0
@@ -46,8 +46,11 @@ class Stepper:
                         GPIO.output(self.pinList[pin], self.sequence[step_counter][pin])
                     if direction == 1 and GPIO.gpio_function(self.pin1)==0:
                         step_counter = (step_counter - 1) % 4
-                    elif direction == 0 and GPIO.gpio_function(self.pin1)==0:
+                    elif direction == -1 and GPIO.gpio_function(self.pin1)==0:
                         step_counter = (step_counter +1) % 4
+                    elif direction == 0:
+                        self.disable()
+                        exit(1)
                     elif GPIO.gpio_function(self.pin1)==1 or KeyboardInterrupt:
                         GPIO.setmode(GPIO.BCM)
                         print("broken")
