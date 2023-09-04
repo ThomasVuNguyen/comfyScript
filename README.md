@@ -86,3 +86,20 @@ python3 stepper/stepper.py [pin1] [pin2] [pin3] [pin4] [direction]
 future plan: option for full, one-and-a-half, and one step control
 note: currently, there is a 0.1 second delay between direction changes - to be improved
 ```
+
+## Distance Sensor (HC-SR04)
+<div id="header" style="float: left;" >
+  <img src="assets/distance-sensor.png" width="40"/>
+</div>
+
+```
+Usage:
+python3 distance_sensor/HC-SR04.py [trig] [echo] [state]
+
+  where:
+    trig & echo: trigger & echo pins
+    state: 1 - running & 0 - disable (used to enable sensor from different SSH clients)
+
+future plan: option for distance in m, inches & ft (currently in cm)
+note: the reading rate is once every 0.1s, this can be changed manually if needed
+```
