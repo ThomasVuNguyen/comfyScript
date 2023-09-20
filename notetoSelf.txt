@@ -3,4 +3,4 @@ command: raspi-gpio get 11 -> text
 FSEL extraction:  text.split(' ')[3].strip().split('=')[1]
 
 Launch coming up, you got this. 2 weeks
-testing
+This is for testing an automatically updating feature in comfySpace
