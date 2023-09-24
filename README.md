@@ -103,3 +103,5 @@ python3 distance_sensor/HC-SR04.py [trig] [echo] [state]
 future plan: option for distance in m, inches & ft (currently in cm)
 note: the reading rate is once every 0.1s, this can be changed manually if needed
 ```
+
+<a href="https://iconduck.com/sets/arduino-icons-kit" target="_blank">Icons</a> by <a href="https://iconduck.com/" target="_blank">Iconduck</a><br />
