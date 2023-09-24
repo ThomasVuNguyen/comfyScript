@@ -120,12 +120,7 @@ python3 buzzer/buzzer.py [pin] [state]
 
 ```
 
-<a href="https://iconduck.com/sets/arduino-icons-kit" target="_blank">Icons</a> by <a href="https://iconduck.com/" target="_blank">Iconduck</a>, <a href="https://www.reshot.com/" target="_blank">Reshot</a><br />
+<a href="https://iconduck.com/sets/arduino-icons-kit" target="_blank">Icons</a> by <a href="https://iconduck.com/" target="_blank">Iconduck</a>, <a href="https://www.reshot.com/" target="_blank">Reshot</a>
 <a href="https://icons8.com/illustrations/illustration/3d-fluency-raspberry" target="_blank">3D Raspberry</a> icon by <a href="https://icons8.com/illustrations" target="_blank">Icon8</a>
-
-
-
 <a href="https://icons8.com/icon/8BGi5ks3s1pY/led-diode" target="_blank">LED Diode</a> icon by <a href="https://icons8.com/illustrations" target="_blank">Icon8</a>
-=======
 <a href="https://iconduck.com/sets/arduino-icons-kit" target="_blank">Icons</a> by <a href="https://iconduck.com/" target="_blank">Iconduck</a><br />
->>>>>>> dced1f6ced7efcbc3b71a278039ce485a1b32531
