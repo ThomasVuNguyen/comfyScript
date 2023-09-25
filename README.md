@@ -87,7 +87,7 @@ future plan: option for full, one-and-a-half, and one step control
 note: currently, there is a 0.1 second delay between direction changes - to be improved
 ```
 
-## Distance Sensor (HC-SR04)
+## Distance Sensor (HC-SR04 and infared shock sensor)
 <div id="header" style="float: left;" >
   <img src="assets/distance-sensor.png" width="40"/>
 </div>
@@ -95,8 +95,11 @@ note: currently, there is a 0.1 second delay between direction changes - to be i
 ```
 Usage:
 python3 distance_sensor/HC-SR04.py [trig] [echo] [state]
+python3 avoidance_sensor/avoidance_sensor.py [pin] [state]
 
   where:
+    HC-SR04.py -> ultrasound sensor & avoidance_sensor.py for infared sensor
+    pin: avoidance sensor pun
     trig & echo: trigger & echo pins
     state: 1 - running & 0 - disable (used to enable sensor from different SSH clients)
 
@@ -104,8 +107,7 @@ future plan: option for distance in m, inches & ft (currently in cm)
 note: the reading rate is once every 0.1s, this can be changed manually if needed
 ```
 
-<<<<<<< HEAD
-##  Buzzer 
+##  Buzzer (and passive buzzer)
 <div id="header" style="float: left;" >
   <img src="assets/buzzer.png" width="40"/>
 </div>
@@ -113,12 +115,15 @@ note: the reading rate is once every 0.1s, this can be changed manually if neede
 ```
 Usage:
 python3 buzzer/buzzer.py [pin] [state]
+python3 buzzer/passive_buzzer.py [pin] [state]
 
   where:
+    passive_buzzer.py is used to passive buzzer
     pin: pinout to control buzzer
     state: 1 - running & 0 - disable 
 
 ```
+
 
 <a href="https://iconduck.com/sets/arduino-icons-kit" target="_blank">Icons</a> by <a href="https://iconduck.com/" target="_blank">Iconduck</a>, <a href="https://www.reshot.com/" target="_blank">Reshot</a>
 <a href="https://icons8.com/illustrations/illustration/3d-fluency-raspberry" target="_blank">3D Raspberry</a> icon by <a href="https://icons8.com/illustrations" target="_blank">Icon8</a>
