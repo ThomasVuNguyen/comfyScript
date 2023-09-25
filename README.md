@@ -124,8 +124,23 @@ python3 buzzer/passive_buzzer.py [pin] [state]
 
 ```
 
+##  DC Motor & L298N motor controller
+<div id="header" style="float: left;" >
+  <img src="assets/dc-motor.png" width="40"/>
+</div>
 
-<a href="https://iconduck.com/sets/arduino-icons-kit" target="_blank">Icons</a> by <a href="https://iconduck.com/" target="_blank">Iconduck</a>, <a href="https://www.reshot.com/" target="_blank">Reshot</a>
-<a href="https://icons8.com/illustrations/illustration/3d-fluency-raspberry" target="_blank">3D Raspberry</a> icon by <a href="https://icons8.com/illustrations" target="_blank">Icon8</a>
-<a href="https://icons8.com/icon/8BGi5ks3s1pY/led-diode" target="_blank">LED Diode</a> icon by <a href="https://icons8.com/illustrations" target="_blank">Icon8</a>
-<a href="https://iconduck.com/sets/arduino-icons-kit" target="_blank">Icons</a> by <a href="https://iconduck.com/" target="_blank">Iconduck</a><br />
+```
+Usage:
+python3 motor/DCmotor.py pin1 pin2 pin3 pin4 state1 state2 state3 state4
+
+  where:
+    
+    pin1 -> pin4: L298 pinout connections
+    state1 -> state 1: states of pin1 to pin4 (state = 1 means on and state = 0 means off)
+
+```
+
+<a href="https://iconduck.com/sets/arduino-icons-kit" target="_blank">Icons</a> by <a href="https://iconduck.com/" target="_blank">Iconduck</a>, <a href="https://www.reshot.com/" target="_blank">Reshot</a><br>
+<a href="https://icons8.com/illustrations/illustration/3d-fluency-raspberry" target="_blank">3D Raspberry</a> icon by <a href="https://icons8.com/illustrations" target="_blank">Icon8</a><br>
+<a href="https://icons8.com/icon/8BGi5ks3s1pY/led-diode" target="_blank">LED Diode</a> icon by <a href="https://icons8.com/illustrations" target="_blank">Icon8</a><br>
+<a href="https://iconduck.com/sets/arduino-icons-kit" target="_blank">Icons</a> by <a href="https://iconduck.com/" target="_blank">Iconduck</a><br /><br>
