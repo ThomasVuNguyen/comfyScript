@@ -132,6 +132,7 @@ python3 buzzer/passive_buzzer.py [pin] [state]
 ```
 Usage:
 python3 motor/DCmotor.py pin1 pin2 pin3 pin4 state1 state2 state3 state4
+python3 motor/DCmotor_single.py pin1 pin2 state1 state2 (for single motor control)
 
   where:
     
