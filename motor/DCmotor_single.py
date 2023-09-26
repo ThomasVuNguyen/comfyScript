@@ -10,8 +10,12 @@ class DCsensorSingle:
     def setup(self):
         GPIO.setmode(GPIO.BCM)
         GPIO.setwarnings(False)
+        GPIO.setup(self.pin1, GPIO.IN)
+        GPIO.setup(self.pin2, GPIO.IN)
         GPIO.setup(self.pin1, GPIO.OUT)
         GPIO.setup(self.pin2, GPIO.OUT)
+        GPIO.output(self.pin1,GPIO.LOW)
+        GPIO.output(self.pin1,GPIO.LOW)
         
     def cleanup(self):
         GPIO.setmode(GPIO.BCM)
@@ -23,26 +27,38 @@ class DCsensorSingle:
         GPIO.setwarnings(False)
         GPIO.setup(self.pin1, GPIO.IN)
         GPIO.setup(self.pin2, GPIO.IN)
-        time.sleep(0.01)
         GPIO.cleanup()
         
     def turnOn(self, state1, state2):
         self.setup()
-        while(GPIO.gpio_function(self.pin1)==0):
-            time.sleep(0.2)
-            if(state1 ==1):
-                GPIO.output(self.pin1,GPIO.HIGH)
+        while True:
+            if GPIO.gpio_function(self.pin1)==0:
+                if state1 ==1 and state2 ==1:
+                    GPIO.output(self.pin1,GPIO.HIGH)
+                    GPIO.output(self.pin2,GPIO.HIGH)
+                    exit(1)
+                elif state1 ==1 and state2 == 0:
+                    GPIO.output(self.pin1,GPIO.HIGH)
+                    GPIO.output(self.pin2,GPIO.LOW)
+                    exit(1)
+                elif state1 ==0 and state2 == 1:
+                    GPIO.output(self.pin1,GPIO.LOW)
+                    GPIO.output(self.pin2,GPIO.HIGH)
+                    exit(1)
+                elif state1 ==0 and state2 == 0:
+                    GPIO.output(self.pin1,GPIO.LOW)
+                    GPIO.output(self.pin2,GPIO.LOW)
+                    exit(1)
+                else:
+                    print("wrong state values - keep it 1 or 0")
+                    exit(1)
             else:
-                GPIO.output(self.pin1,GPIO.LOW)
+                print("finished")
+                self.disable()
+                self.cleanup()
+                exit(1)
                 
-            if(state2 ==1):
-                GPIO.output(self.pin2,GPIO.HIGH)
-            else:
-                GPIO.output(self.pin2,GPIO.LOW)
-                
-        self.disable()
-        self.cleanup()
-        exit(1)
+
 
         
 pin1 = int(sys.argv[1])
