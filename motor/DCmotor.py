@@ -34,27 +34,27 @@ class DCsensor:
         
     def turnOn(self, state1, state2, state3, state4):
         self.setup()
-        while(GPIO.gpio_function(self.pin1)==0):
-            time.sleep(0.2)
-            if(state1 ==1):
-                GPIO.output(self.pin1,GPIO.HIGH)
-            else:
-                GPIO.output(self.pin1,GPIO.LOW)
+        #while(GPIO.gpio_function(self.pin1)==0):
+        time.sleep(0.2)
+        if(state1 ==1):
+            GPIO.output(self.pin1,GPIO.HIGH)
+        else:
+            GPIO.output(self.pin1,GPIO.LOW)
                 
-            if(state2 ==1):
-                GPIO.output(self.pin2,GPIO.HIGH)
-            else:
-                GPIO.output(self.pin2,GPIO.LOW)
+        if(state2 ==1):
+            GPIO.output(self.pin2,GPIO.HIGH)
+        else:
+            GPIO.output(self.pin2,GPIO.LOW)
     
-            if(state3 ==1):
-                GPIO.output(self.pin3,GPIO.HIGH)
-            else:
-                GPIO.output(self.pin3,GPIO.LOW)
+        if(state3 ==1):
+            GPIO.output(self.pin3,GPIO.HIGH)
+        else:
+            GPIO.output(self.pin3,GPIO.LOW)
                 
-            if(state4 ==1):
-                GPIO.output(self.pin4,GPIO.HIGH)
-            else:
-                GPIO.output(self.pin4,GPIO.LOW)
+        if(state4 ==1):
+            GPIO.output(self.pin4,GPIO.HIGH)
+        else:
+            GPIO.output(self.pin4,GPIO.LOW)
                 
         self.disable()
         self.cleanup()
