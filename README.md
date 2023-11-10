@@ -1,5 +1,6 @@
 # comfyScript
-A scripting language to control Raspberry Pi with comfyPi
+Control Raspberry Pi components in seconds!
+Instead of writing your own python/C scripts, you can control **almost** every components with just 1 line.
 <div id="header" align="center">
   <img src="assets/icon.png" width="100"/>
 </div>
