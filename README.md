@@ -1,5 +1,5 @@
 # comfyScript
-<div align="center">Control any Raspberry Pi components with one line of code</div>
+A scripting language to control Raspberry Pi with comfyPi
 <div id="header" align="center">
   <img src="assets/icon.png" width="100"/>
 </div>
@@ -24,7 +24,7 @@
 
 ```
 Usage:
-python3 LED/led.py [ledPin] [ledStatus]
+python3 comfyScript/LED/led.py [ledPin] [ledStatus]
   where:
     ledPin: LED power pin (BCM pinout)
     ledStatus: 1/0 or GPIO.HIGH/GPIO.LOW
@@ -37,7 +37,7 @@ python3 LED/led.py [ledPin] [ledStatus]
 
 ```
 Usage:
-python3 LED/RGB_led.py [redPin] [greenPin] [bluePin] [redStatus][greenStatus] [blueStatus]
+python3 comfyScript/LED/RGB_led.py [redPin] [greenPin] [bluePin] [redStatus][greenStatus] [blueStatus]
   where:
     redPin, greenPin & bluePin: pins for red, green & blue terminals (BCM pinout)
     redStatus, greenStatus, blueStatus: 1/0 or GPIO.HIGH/GPIO.LOW
@@ -50,7 +50,7 @@ python3 LED/RGB_led.py [redPin] [greenPin] [bluePin] [redStatus][greenStatus] [b
 
 ```
 Usage:
-python3 servo/angle.py [controlPin] [angle]
+python3 comfyScript/servo/angle.py [controlPin] [angle]
   where:
     controlPin: pinout to control servo PWM (BCM layout)
     angle: desired angle (0-180 or 0-360)
@@ -63,8 +63,8 @@ python3 servo/angle.py [controlPin] [angle]
 
 ```
 Usage:
-python3 DHT/dht_temp.py [sensor type] [pinout]   -> temperature (C)
-python3 DHT/dht_humid.py [sensor type] [pinout]   -> relative humidity
+python3 comfyScript/DHT/dht_temp.py [sensor type] [pinout]   -> temperature (C)
+python3 comfyScript/DHT/dht_humid.py [sensor type] [pinout]   -> relative humidity
   where:
     sensor type: 11,22, or 2302
     pinout: pinout to read sensor
@@ -77,7 +77,7 @@ python3 DHT/dht_humid.py [sensor type] [pinout]   -> relative humidity
 
 ```
 Usage:
-python3 stepper/stepper.py [pin1] [pin2] [pin3] [pin4] [direction]
+python3 comfyScript/stepper/stepper.py [pin1] [pin2] [pin3] [pin4] [direction]
 
   where:
     pin1 to pin4: pins 1 -> 4 (ULN2003 driver board)
@@ -94,8 +94,8 @@ note: currently, there is a 0.1 second delay between direction changes - to be i
 
 ```
 Usage:
-python3 distance_sensor/HC-SR04.py [trig] [echo] [state]
-python3 avoidance_sensor/avoidance_sensor.py [pin] [state]
+python3 comfyScript/distance_sensor/HC-SR04.py [trig] [echo] [state]
+python3 comfyScript/avoidance_sensor/avoidance_sensor.py [pin] [state]
 
   where:
     HC-SR04.py -> ultrasound sensor & avoidance_sensor.py for infared sensor
@@ -114,8 +114,8 @@ note: the reading rate is once every 0.1s, this can be changed manually if neede
 
 ```
 Usage:
-python3 buzzer/buzzer.py [pin] [state]
-python3 buzzer/passive_buzzer.py [pin] [state]
+python3 comfyScript/buzzer/buzzer.py [pin] [state]
+python3 comfyScript/buzzer/passive_buzzer.py [pin] [state]
 
   where:
     passive_buzzer.py is used to passive buzzer
@@ -151,8 +151,8 @@ Setup (once):
 Enable SPI interface on your Raspberry Pi & reboot
 
 Usage:
-python3 motor/DCmotor.py pin1 pin2 pin3 pin4 state1 state2 state3 state4
-python3 motor/DCmotor_single.py pin1 pin2 state1 state2 (for single motor control)
+python3 comfyScript/motor/DCmotor.py pin1 pin2 pin3 pin4 state1 state2 state3 state4
+python3 comfyScript/motor/DCmotor_single.py pin1 pin2 state1 state2 (for single motor control)
 
   where:
     
