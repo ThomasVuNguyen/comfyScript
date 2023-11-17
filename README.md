@@ -131,8 +131,8 @@ python3 comfyScript/buzzer/passive_buzzer.py [pin] [state]
 
 ```
 Usage:
-python3 motor/DCmotor.py pin1 pin2 pin3 pin4 state1 state2 state3 state4
-python3 motor/DCmotor_single.py pin1 pin2 state1 state2 (for single motor control)
+python3 comfyScript/motor/DCmotor.py pin1 pin2 pin3 pin4 state1 state2 state3 state4
+python3 comfyScript/motor/DCmotor_single.py pin1 pin2 state1 state2 (for single motor control)
 
   where:
     
@@ -143,21 +143,27 @@ python3 motor/DCmotor_single.py pin1 pin2 state1 state2 (for single motor contro
 
 ##  2.7 in. e-Paper HAT
 <div id="header" style="float: left;" >
-  <img src="assets/dc-motor.png" width="40"/>
+  <img src="assets/2.7inch-e-paper-hat.jpg" width="40"/>
 </div>
 
 ```
 Setup (once):
 Enable SPI interface on your Raspberry Pi & reboot
 
-Usage:
-python3 comfyScript/motor/DCmotor.py pin1 pin2 pin3 pin4 state1 state2 state3 state4
-python3 comfyScript/motor/DCmotor_single.py pin1 pin2 state1 state2 (for single motor control)
+---Currently in Beta---
 
-  where:
-    
-    pin1 -> pin4: L298 pinout connections
-    state1 -> state 1: states of pin1 to pin4 (state = 1 means on and state = 0 means off)
+```
+
+##  2.7 in. e-Paper HAT
+<div id="header" style="float: left;" >
+  <img src="assets/2.7inch-e-paper-hat.jpg" width="40"/>
+</div>
+
+```
+Setup (once):
+Enable SPI interface on your Raspberry Pi & reboot
+
+---Currently in Beta---
 
 ```
 
