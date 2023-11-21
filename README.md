@@ -17,6 +17,22 @@ A scripting language to control Raspberry Pi with comfyPi
 
 **`A more elegant approach to Raspberry Pi`**
 
+<details>
+<summary> Comfy2.0 Update - Development experience improved!</summary>
+Imaging instead of writing<br>
+<code>python3 comfyScript/LED/led.py [ledPin] [ledStatus]</code><br>
+Use can write<br>
+<code>comfy led [ledPin] [ledStatus]</code>
+<br>
+Well now you can! This will automatically be available if used with ComfySpace 3.0.
+If you want to do it manually or without ComfySpace:
+<li> Make sure comfyScript folder/repo is in your home directory</li>
+<li> Run <code>chmod u+x comfyScript/comfy.sh</code> to make comfy executable </li>
+<li> Run <code>alias comfy='comfyScript/comfy.sh'</code> to assign an alias</li>
+<li> Start making! </li>
+
+</details>
+
 ## Single-color LED
 <div id="header" style="float: left;" >
   <img src="assets/led.png" width="40"/>
@@ -154,18 +170,6 @@ Enable SPI interface on your Raspberry Pi & reboot
 
 ```
 
-##  2.7 in. e-Paper HAT
-<div id="header" style="float: left;" >
-  <img src="assets/2.7inch-e-paper-hat.jpg" width="40"/>
-</div>
-
-```
-Setup (once):
-Enable SPI interface on your Raspberry Pi & reboot
-
----Currently in Beta---
-
-```
 
 ##  0.96 inch I2C OLED display
 <div id="header" style="float: left;" >
