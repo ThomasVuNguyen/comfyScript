@@ -31,6 +31,7 @@ case $1 in
     humid)
       python3 comfyScript/DHT/dht_humid.py $2 $3
   ;;
+  esac
   *)
   echo "Wrong command, try again"
   ;;
