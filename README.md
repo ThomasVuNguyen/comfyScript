@@ -27,8 +27,8 @@ Use can write<br>
 Well now you can! This will automatically be available if used with ComfySpace 3.0.
 If you want to do it manually or without ComfySpace:
 <li> Make sure comfyScript folder/repo is in your home directory</li>
-<li> Run <code>chmod u+x comfyScript/comfy.sh</code> to make comfy executable </li>
-<li> Run <code>alias comfy='comfyScript/comfy.sh'</code> to assign an alias</li>
+<li> Run <code>chmod u+x comfyScript/bash/comfy.sh</code> to make comfy executable </li>
+<li> Run <code>alias comfy='comfyScript/bash/comfy.sh'</code> to assign an alias</li>
 <li> Start making! </li>
 
 </details>
