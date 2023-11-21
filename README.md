@@ -31,6 +31,16 @@ If you want to do it manually or without ComfySpace:
 <li> Run <code>alias comfy='comfyScript/bash/comfy.sh'</code> to assign an alias</li>
 <li> Start making! </li>
 
+If you wish to update comfyScript2.0 everytime:
+<li> <code> cd comfyScript && git reset --hard</code></li>
+<li> <code> cd comfyScript && git pull </code></li>
+<li> <code> chmod u+x comfyScript/bash/comfy.sh</code></li>
+<li> <code> alias comfy='comfyScript/bash/comfy.sh</code></li>
+
+This is only if you want to use the automatic function of 2.0.
+This is due to executables have certain changes made to them, preventing <code>git pull</code> from working properly. 
+In order to resolve it, you need to **reset & update** the local repository, **create** executable, and **alias** the executable again.
+
 </details>
 
 ## Single-color LED
