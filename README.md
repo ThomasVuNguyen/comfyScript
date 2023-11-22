@@ -202,3 +202,25 @@ sudo apt-get install i2c-tools
 <a href="https://icons8.com/icon/8BGi5ks3s1pY/led-diode" target="_blank">LED Diode</a> icon by <a href="https://icons8.com/illustrations" target="_blank">Icon8</a><br>
 <a href="https://iconduck.com/sets/arduino-icons-kit" target="_blank">Icons</a> by <a href="https://iconduck.com/" target="_blank">Iconduck</a><br />
 <a href="https://github.com/waveshareteam/e-Paper">E-paper library by Waveshare</a>
+
+
+# Dev blog
+
+Comfy 2.0 is a pretty interesting development experience.
+
+1. Shorterning <code> python3 comfyScript/LED/led.py </code> to <code> comfy LED </code>
+- Alias, bash.rc, bash_profile, & symlink do not work
+Solution: /usr/bin apps
+2. Performance
+- Running a bash script -> refer to central comfy.py -> led.py
+This caused a noticable latency issue.
+
+Let's take a look at how:
+- Translation <code> comfy.py -> led.py</code>:
+  - exec() creates 2* time to run (80.000 nano seconds -> 160.000 nano seconds)
+  - os.system & subsystem create 1000* to run
+- Translation <code> bash script -> comfy.py</code>:
+  - apparently bash is slower than python: https://blog.carlesmateo.com/2014/10/13/performance-of-several-languages/
+
+Well don't know how but bash -> bash -> led.py works wonder!
+Anyway, good night!
