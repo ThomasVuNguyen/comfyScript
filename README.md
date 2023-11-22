@@ -27,19 +27,10 @@ Use can write<br>
 Well now you can! This will automatically be available if used with ComfySpace 3.0.
 If you want to do it manually or without ComfySpace:
 <li> Make sure comfyScript folder/repo is in your home directory</li>
-<li> Run <code>chmod u+x comfyScript/bash/comfy.sh</code> to make comfy executable </li>
-<li> Run <code>alias comfy='comfyScript/bash/comfy.sh'</code> to assign an alias</li>
+<li> Run <code>sudo cp comfyScript/bash/comfy /usr/bin/comfy</code> to assign custom command </li>
+<li> Run <code>sudo chmod +x /usr/bin/comfy</code> to allow executable</li>
 <li> Start making! </li>
 
-If you wish to update comfyScript2.0 everytime:
-<li> <code> cd comfyScript && git reset --hard</code></li>
-<li> <code> cd comfyScript && git pull </code></li>
-<li> <code> chmod u+x comfyScript/bash/comfy.sh</code></li>
-<li> <code> alias comfy='comfyScript/bash/comfy.sh</code></li>
-
-This is only if you want to use the automatic function of 2.0.
-This is due to executables have certain changes made to them, preventing <code>git pull</code> from working properly. 
-In order to resolve it, you need to **reset & update** the local repository, **create** executable, and **alias** the executable again.
 
 </details>
 
