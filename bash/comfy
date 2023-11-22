@@ -1,1 +1,1 @@
-/bin/bash comfy.sh "$@"
+/bin/bash comfyScript/bash/comfy.sh "$@"
