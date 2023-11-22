@@ -23,14 +23,6 @@ case $1 in
   python3 comfyScript/motor/DCmotor_single.py $2 $3 $4 $5
   ;;
 
-  DHT)
-  case $2 in
-    temp)
-      python3 comfyScript/DHT/dht_temp.py $2 $3
-  ;;
-    humid)
-      python3 comfyScript/DHT/dht_humid.py $2 $3
-  ;;
   *)
   echo "Wrong command, try again"
   ;;
