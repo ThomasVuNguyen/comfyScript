@@ -1,1 +1,1 @@
-python3 comfyScript/comfy.py "$@"
+/bin/bash comfy.sh "$@"
