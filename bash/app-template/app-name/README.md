@@ -13,3 +13,6 @@ The file structure is already established for a barebone basic installation deb 
 To have a new release: 
 1. Edit DEBIAN/control for a different version & repackage <code>dpkg-deb --build --root-owner-group deb/</code>
 2. A new installation will update the app <code> sudo apt install ./app.deb</code>
+
+
+Credit to [Open Source Knight](https://www.youtube.com/watch?v=b5jAExAF1oM) for the great instruction
