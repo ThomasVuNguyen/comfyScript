@@ -7,6 +7,10 @@ case $1 in
   python3 comfyScript/LED/led.py $2 $3
   ;;
 
+  rgbled)
+  python3 comfyScript/LED/RGB_led.py $2 $3 $4 $5 $6 $7
+  ;;
+
   stepper)
   python3 comfyScript/stepper/stepper.py $2 $3 $4 $5 $6
   ;;
@@ -15,6 +19,10 @@ case $1 in
   python3 comfyScript/distance_sensor/HC-SR04.py $2 $3 $4
   ;;
 
+  avoidance)
+  python3 comfyScript/avoidance_sensor/avoidance_sensor.py $2 $3
+  ;;
+  
   buzzer)
   python3 comfyScript/buzzer/buzzer.py $2 $3
   ;;
@@ -26,7 +34,19 @@ case $1 in
   buzzer)
   python3 comfyScript/buzzer/buzzer.py $2 $3
   ;;
-  
+
+  passive_buzzer)
+  python3 comfyScript/buzzer/passive_buzzer.py $2 $3
+  ;;
+
+  dht_temp)
+  python3 comfyScript/DHT/dht_temp.py $2 $3
+  ;;
+
+  dht_humid)
+  python3 comfyScript/DHT/dht_humid.py $2 $3
+  ;;
+
   *)
   echo "Wrong command, try again"
   ;;
