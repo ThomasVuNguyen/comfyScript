@@ -23,6 +23,10 @@ case $1 in
   python3 comfyScript/motor/DCmotor_single.py $2 $3 $4 $5
   ;;
 
+  buzzer)
+  python3 comfyScript/buzzer/buzzer.py $2 $3
+  ;;
+  
   *)
   echo "Wrong command, try again"
   ;;
