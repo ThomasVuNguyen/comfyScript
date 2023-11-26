@@ -1,0 +1,5 @@
+Package: app-name
+Version: 0.0.1
+Architecture: all
+Maintainer: Your-name <email@gmail.com>
+Description: A description
