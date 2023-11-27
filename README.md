@@ -153,35 +153,25 @@ comfy dc [pin1] [pin2] [state1] [state2]
     state1 -> state 1: states of pin1 to pin4 (state = 1 means on and state = 0 means off)
 
 ```
-
-##  2.7 in. e-Paper HAT
+##  Servo Motor
 <div id="header" style="float: left;" >
-  <img src="assets/2.7inch-e-paper-hat.jpg" width="40"/>
+  <img src="assets/dc-motor.png" width="40"/>
 </div>
 
 ```
-Setup (once):
-Enable SPI interface on your Raspberry Pi & reboot
+Usage: for single motor control
+comfy servo [pin] [angle]
 
----Currently in Beta---
-
-```
-
-
-##  0.96 inch I2C OLED display
-<div id="header" style="float: left;" >
-  <img src="assets/096oled.jpg" width="40"/>
-</div>
+  where:
+    
+    pin: control pin
+    angle: any numerical angle
 
 ```
-Setup (once):
-Enable I2C interface on your Raspberry Pi & reboot
-sudo apt-get install python-smbus
-sudo apt-get install i2c-tools
 
----Currently in Beta---
 
-```
+
+
 
 # Credits
 <a href="https://iconduck.com/sets/arduino-icons-kit" target="_blank">Icons</a> by <a href="https://iconduck.com/" target="_blank">Iconduck</a>, <a href="https://www.reshot.com/" target="_blank">Reshot</a><br>
@@ -217,10 +207,10 @@ Anyway, good night!
 
 </details>
 
-# Optional: Comfy 1.0
+# Optional
 
 <details>
-<summary> For reference purposes & some decrease in latency</summary>
+<summary> ComfyScript 1.0</summary>
 
 ## Single-color LED
 <div id="header" style="float: left;" >
@@ -323,5 +313,51 @@ python3 comfyScript/motor/DCmotor_single.py pin1 pin2 state1 state2 (for single 
     state1 -> state 1: states of pin1 to pin4 (state = 1 means on and state = 0 means off)
 
 ```
+##  Servo Motor
+<div id="header" style="float: left;" >
+  <img src="assets/servo.png" width="40"/>
+</div>
 
+```
+Usage: for single motor control
+python3 comfyScript/servo/sg90.py [pin] [angle]
+
+  where:
+    
+    pin: control pin
+    angle: Any numerical angle
+
+```
+
+</details>
+
+<details>
+<summary> Active development </summary>
+##  0.96 inch I2C OLED display
+<div id="header" style="float: left;" >
+  <img src="assets/096oled.jpg" width="40"/>
+</div>
+
+```
+Setup (once):
+Enable I2C interface on your Raspberry Pi & reboot
+sudo apt-get install python-smbus
+sudo apt-get install i2c-tools
+
+---Currently in Beta---
+
+```
+
+##  2.7 in. e-Paper HAT
+<div id="header" style="float: left;" >
+  <img src="assets/2.7inch-e-paper-hat.jpg" width="40"/>
+</div>
+
+```
+Setup (once):
+Enable SPI interface on your Raspberry Pi & reboot
+
+---Currently in Beta---
+
+```
 </details>

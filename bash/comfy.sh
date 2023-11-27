@@ -22,9 +22,13 @@ case $1 in
   avoidance)
   python3 comfyScript/avoidance_sensor/avoidance_sensor.py $2 $3
   ;;
-  
+
   buzzer)
   python3 comfyScript/buzzer/buzzer.py $2 $3
+  ;;
+
+  servo)
+  python3 comfyScript/servo/sg90.py $2 $3
   ;;
 
   dc)
