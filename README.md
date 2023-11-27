@@ -60,15 +60,6 @@ comfy rgbled [redPin] [greenPin] [bluePin] [redStatus] [greenStatus] [blueStatus
     redStatus, greenStatus, blueStatus: 1/0 or GPIO.HIGH/GPIO.LOW
 ```
 
-## Servo motor
-<div id="header" style="float: left;" >
-  <img src="assets/servo.png" width="40"/>
-</div>
-
-```
-Usage:
-Currently in active beta
-```
 
 ## DHT (3 pins)
 <div id="header" style="float: left;" >
