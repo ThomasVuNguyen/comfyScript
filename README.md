@@ -155,7 +155,7 @@ comfy dc [pin1] [pin2] [state1] [state2]
 ```
 ##  Servo Motor
 <div id="header" style="float: left;" >
-  <img src="assets/dc-motor.png" width="40"/>
+  <img src="assets/servo.png" width="40"/>
 </div>
 
 ```
