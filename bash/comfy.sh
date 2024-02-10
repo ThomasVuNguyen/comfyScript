@@ -51,6 +51,10 @@ case $1 in
   python3 comfyScript/DHT/dht_humid.py $2 $3
   ;;
 
+  camera)
+  python3 comfyScript/camera/$2.py
+  ;;
+
   *)
   echo "Wrong command, try again"
   ;;
