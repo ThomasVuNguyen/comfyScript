@@ -160,7 +160,17 @@ comfy servo [pin] [angle]
 
 ```
 
+##  Raspberry Pi camera
+<div id="header" style="float: left;" >
+  <img src="assets/camera.jpg" width="40"/>
+</div>
 
+```
+Usage: to display, take picture & record video
+
+To start streaming: comfy camera stream
+
+```
 
 
 
