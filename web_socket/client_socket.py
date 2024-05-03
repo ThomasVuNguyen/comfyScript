@@ -3,7 +3,7 @@
 from simple_websocket import Client, ConnectionClosed
 
 def main():
-    ws = Client.connect('ws://192.168.1.7:5000/echo')
+    ws = Client.connect('ws://tung.local:5000/echo')
     try:
         while True:
             data = input('> ')

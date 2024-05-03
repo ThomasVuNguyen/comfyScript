@@ -7,3 +7,8 @@ This is for testing an automatically updating feature in comfySpace
 Wish me luck!
 It worked!
 
+To initialize web_socket on boot:
+
+sudo nano /etc/rc.local
+
+add before exit 0: comfy web_socket
