@@ -54,6 +54,10 @@ case $1 in
   camera)
   python3 comfyScript/camera/$2.py
   ;;
+  
+  web_socket)
+  python3 comfyScript/web_socket/start_socket.py
+  ;;
 
   *)
   echo "Wrong command, try again"
