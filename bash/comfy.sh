@@ -65,6 +65,8 @@ case $1 in
 
   gemini_run)
   python3 comfyScript/gemini_ai/convo.py $2
+  ;;
+  
   *)
   echo "Wrong command, try again"
   ;;
