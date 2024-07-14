@@ -59,6 +59,12 @@ case $1 in
   python3 comfyScript/web_socket/start_socket.py
   ;;
 
+  gemini_setup)
+  python3 comfyScript/gemini_ai/setup.py $2
+  ;;
+
+  gemini_run)
+  python3 comfyScript/gemini_ai/convo.py $2
   *)
   echo "Wrong command, try again"
   ;;
