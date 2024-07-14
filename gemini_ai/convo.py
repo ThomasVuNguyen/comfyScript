@@ -13,8 +13,6 @@ def read_api_key():
 
 api_key = read_api_key()
 
-#ledPin = int(sys.argv[1])
-
 def gemini_convo(prompt):
     url = "https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=" + api_key
     headers = {
@@ -41,4 +39,6 @@ def gemini_convo(prompt):
     else:
         return None
     
-print(gemini_convo("What is the meaning of life?"))
+prompt = ' '.join(sys.argv[1:])
+print(prompt)
+print(gemini_convo(prompt))
