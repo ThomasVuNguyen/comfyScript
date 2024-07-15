@@ -10,7 +10,6 @@ def read_api_key():
     with open(api_key_file, 'r') as file:
         api_key = file.read().strip()
     return api_key
-
 api_key = read_api_key()
 
 def gemini_convo(prompt):
@@ -35,10 +34,14 @@ def gemini_convo(prompt):
     response_json = response.json()
 
     if response.status_code == 200:
-        return response_json["candidates"][0]["content"]["parts"][0]["text"]
+        #return response_json
+        if "content" in response_json["candidates"][0]:
+            return response_json["candidates"][0]["content"]["parts"][0]["text"]
+        else:
+            return 'Problem with the response, please try another prompt.'
     else:
         return None
     
 prompt = ' '.join(sys.argv[1:])
-print(prompt)
+#print(prompt)
 print(gemini_convo(prompt))
