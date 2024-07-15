@@ -2,7 +2,8 @@ import os
 import sys
 def save_to_gemini_api_file(data):
     data = str(data)
-    folder_path = os.path.join(os.getcwd(), 'credentials')
+    current_folder_path = os.path.dirname(os.path.abspath(__file__))
+    folder_path = os.path.join(current_folder_path, 'credentials')
     file_path = os.path.join(folder_path, 'gemini_api.txt')
 
     if not os.path.exists(folder_path):
