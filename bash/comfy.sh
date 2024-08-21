@@ -7,12 +7,11 @@ python3 comfyScript/bash/comfy.py "$@"
 case $1 in
 
   led)
-  
-  python3 comfyScript/LED/led.py $2 $3
+  #python3 comfyScript/LED/led.py $2 $3
   ;;
 
   rgbled)
-  python3 comfyScript/LED/RGB_led.py $2 $3 $4 $5 $6 $7
+  #python3 comfyScript/LED/RGB_led.py $2 $3 $4 $5 $6 $7
   ;;
 
   stepper)
