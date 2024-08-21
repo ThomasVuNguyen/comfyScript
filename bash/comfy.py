@@ -2,13 +2,16 @@ import sys
 from separator import paragraph_to_command_execution
 from interpreter import command_separated
 from execute import execute_command
-
+from read_file import read_file
 
 # Work sequence 
 #   Paragraph + paragraph_to_command_execution = command_list_list
 #   command_list_list + execute_sequence = executed code blocks
 system_variable = sys.argv
 paragraph = " ".join(system_variable[1:])
+
+if '.comfy' in sys.argv[1]:
+    paragraph = read_file(sys.argv[1])
 
 # Run separator - input: paragraph & output: list of list of commands to be run sequentially & in parallel
 
