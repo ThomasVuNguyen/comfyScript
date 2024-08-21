@@ -24,9 +24,11 @@ def execute_command(command_separated):
 
         if(action == 'on' or action == '1'):
             led.on()
-        else:
+        elif(action == 'off' or action == '0'):
             led.off()
-            
+        else:
+            print('led function ', action, ' not found')
+
 
 def extract_integer(string):
     # This pattern matches only integers, including negative integers
@@ -37,5 +39,3 @@ def extract_integer(string):
         
     return None  # Return None if no integer is found
 
-
-execute_command(['comfy', 'led', '1', 'on'])

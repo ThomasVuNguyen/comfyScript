@@ -1,12 +1,13 @@
 #!/bin/bash
 # calling comfy + component + pins
 
-python3 comfyScript/bash/comfy.py "$@"
 
+python3 comfyScript/bash/comfy.py "$@"
 
 case $1 in
 
   led)
+  
   python3 comfyScript/LED/led.py $2 $3
   ;;
 
