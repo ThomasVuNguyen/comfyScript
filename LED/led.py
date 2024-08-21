@@ -11,3 +11,5 @@ else:
         GPIO.output(ledPin, GPIO.LOW)
 
 #to use run command: python3 LED/led.py ledPin ledStatus
+
+

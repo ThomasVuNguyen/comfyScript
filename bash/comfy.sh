@@ -1,6 +1,9 @@
 #!/bin/bash
 # calling comfy + component + pins
 
+python3 comfyScript/bash/comfy.py "$@"
+
+
 case $1 in
 
   led)
@@ -72,3 +75,4 @@ case $1 in
   ;;
 
 esac
+
