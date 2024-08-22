@@ -28,6 +28,8 @@ def execute_command(command_separated):
             led.on()
         elif(action == 'off' or action == '0'):
             led.off()
+        elif(action == 'blink'):
+            led.blink()
         else:
             print('led function ', action, ' not found')
     

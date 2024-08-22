@@ -24,7 +24,6 @@ class DC_motor:
     def stop(self):
         GPIO.output(self.pin1,GPIO.LOW)
         GPIO.output(self.pin2,GPIO.LOW)
-        
 
         self.setup()
         while True:
