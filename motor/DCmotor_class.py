@@ -8,41 +8,24 @@ class DC_motor:
         self.pin2 = pin2
         GPIO.setmode(GPIO.BCM)
         GPIO.setwarnings(False)
-        GPIO.setup(self.pin1, GPIO.IN)
-        GPIO.setup(self.pin2, GPIO.IN)
         GPIO.setup(self.pin1, GPIO.OUT)
         GPIO.setup(self.pin2, GPIO.OUT)
         GPIO.output(self.pin1,GPIO.LOW)
         GPIO.output(self.pin1,GPIO.LOW)
-
-    def cleanup(self):
-        GPIO.setmode(GPIO.BCM)
-        GPIO.setwarnings(False)
-        GPIO.cleanup()
-        
-    def disable(self):
-        GPIO.setmode(GPIO.BCM)
-        GPIO.setwarnings(False)
-        GPIO.setup(self.pin1, GPIO.IN)
-        GPIO.setup(self.pin2, GPIO.IN)
-        GPIO.cleanup()
     
     def rotate(self):
-        while True:
-            GPIO.output(self.pin1,GPIO.HIGH)
-            GPIO.output(self.pin2,GPIO.LOW)
+        GPIO.output(self.pin1,GPIO.HIGH)
+        GPIO.output(self.pin2,GPIO.LOW)
     
     def reverse(self):
-        while True:
-            GPIO.output(self.pin1,GPIO.LOW)
-            GPIO.output(self.pin2,GPIO.HIGH)
-    
+        GPIO.output(self.pin1,GPIO.LOW)
+        GPIO.output(self.pin2,GPIO.HIGH)
+
     def stop(self):
-        while True:
-            GPIO.output(self.pin1,GPIO.LOW)
-            GPIO.output(self.pin2,GPIO.LOW)
+        GPIO.output(self.pin1,GPIO.LOW)
+        GPIO.output(self.pin2,GPIO.LOW)
         
-    def turnOn(self, state1, state2):
+
         self.setup()
         while True:
             if GPIO.gpio_function(self.pin1)==0:
