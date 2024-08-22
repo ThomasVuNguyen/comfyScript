@@ -2,7 +2,7 @@
 # calling comfy + component + pins
 
 
-python3 comfyScript/bash/comfy.py "$@"
+python3 $HOME/comfyScript/bash/comfy.py "$@"
 
 case $1 in
 
