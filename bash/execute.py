@@ -8,6 +8,7 @@ sys.path.append(comfyscript_path)
 # Now you can import from the led folder
 from LED.led_class import LED
 from LED.RGB_class import RGB_LED
+from motor.DCmotor_class import DC_motor
 def execute_command(command_separated):
     if(command_separated[0] == 'comfy'):
         command_separated.pop(0)
@@ -72,7 +73,19 @@ def execute_command(command_separated):
         
         elif(action in ['off', '0']):
             rgb.off()
-        
+    elif(object in ['dc', 'dcmotor', 'dc_motor']):
+        identification = [extract_integer(command_separated[1]), extract_integer(command_separated[2])]
+        action = command_separated[3]
+
+        dc = DC_motor(identification[0], identification[1])
+
+        if(action in ['rotate', 'on', '1' ,'spin', 'run', 'clockwise', 'clock-wise']):
+            dc.rotate()
+        elif(action in ['reverse', '-1', 'counter-clock', 'counterclock', 'counter_clock', 'counterclockwise']):
+            dc.reverse()
+        else:
+            dc.stop()
+
         
 
 
@@ -87,3 +100,19 @@ def extract_integer(string):
 
 def find_matching_string(string_list, search_terms):
     return next((s for s in string_list if any(term in s for term in search_terms)), None)
+
+
+def parse_int_string(s):
+    # Regular expression pattern to match the format
+    pattern = r'^(\d+)(-\d+)*$'
+    
+    # Check if the string matches the pattern
+    if not re.match(pattern, s):
+        raise ValueError("Invalid format. Expected format: int-int-int-...")
+    
+    # Split the string by '-' and convert each part to an integer
+    try:
+        int_list = [int(x) for x in s.split('-')]
+        return int_list
+    except ValueError:
+        raise ValueError("Invalid integer in the string")
