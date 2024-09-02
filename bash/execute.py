@@ -10,6 +10,8 @@ from LED.led_class import LED
 from LED.RGB_class import RGB_LED
 from motor.DCmotor_class import DC_motor
 from I2C_OLED.oled_class import OLED
+
+from ollama_class.tinyllama_class import tinyllama
 def execute_command(command_separated):
     if(command_separated[0] == 'comfy'):
         command_separated.pop(0)
@@ -97,6 +99,10 @@ def execute_command(command_separated):
             oled.thinking_face()
         elif(action in ['smile', 'smiley', 'smiling']):
             oled.smiley_face()
+    elif(object in ['ollama', 'llama', 'tinyllama', 'ai']):
+        query = command_separated[1]
+        ai = tinyllama()
+        ai.ask(query)
 
 
 
