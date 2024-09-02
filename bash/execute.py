@@ -9,6 +9,7 @@ sys.path.append(comfyscript_path)
 from LED.led_class import LED
 from LED.RGB_class import RGB_LED
 from motor.DCmotor_class import DC_motor
+from I2C_OLED.oled_class import OLED
 def execute_command(command_separated):
     if(command_separated[0] == 'comfy'):
         command_separated.pop(0)
@@ -87,8 +88,16 @@ def execute_command(command_separated):
             dc.reverse()
         else:
             dc.stop()
+    elif(object in ['oled', 'i2c_oled', 'oled_i2c']):
+        action = command_separated[1]
+        oled = OLED()
+        if(action in ['speak', 'speaking']):
+            oled.speak_face()
+        elif(action in ['think', 'thinking']):
+            oled.thinking_face()
+        elif(action in ['smile', 'smiley', 'smiling']):
+            oled.smiley_face()
 
-        
 
 
 def extract_integer(string):
