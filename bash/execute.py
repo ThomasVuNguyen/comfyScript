@@ -10,7 +10,7 @@ from LED.led_class import LED
 from LED.RGB_class import RGB_LED
 from motor.DCmotor_class import DC_motor
 from I2C_OLED.oled_class import OLED
-
+from motor.DCmotor_i2c_single import i2c_motor
 from ollama_class.tinyllama_class import tinyllama
 def execute_command(command_separated):
     if(command_separated[0] == 'comfy'):
@@ -103,7 +103,11 @@ def execute_command(command_separated):
         query = command_separated[1]
         ai = tinyllama()
         ai.ask(query)
-
+    elif(object in ['motor-i2c', 'i2c-motor', 'i2c-dc','dc-i2c']):
+        id = command_separated[1]
+        speed = command_separated[2]
+        motor = i2c_motor(id)
+        motor.spin(speed)
 
 
 def extract_integer(string):

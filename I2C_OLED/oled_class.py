@@ -4,8 +4,10 @@ import time
 import board
 import digitalio
 from PIL import Image, ImageDraw
-import adafruit_ssd1306
-
+try:
+	import adafruit_ssd1306
+except ImportError as e:
+	print('error importing adafruit_ssd1306, you might want to install it with pip')
 class OLED:
         def __init__(self):
               print('oled initialized')

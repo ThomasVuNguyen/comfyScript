@@ -1,5 +1,8 @@
 import os
-import ollama
+try:
+	import ollama
+except ImportError as e:
+	print('error importing ollama, you might want to install it with pip')
 class tinyllama:
     def __init__(self):
         print('tinyllama engaged')
