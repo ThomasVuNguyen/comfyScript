@@ -105,7 +105,9 @@ def execute_command(command_separated):
         ai.ask(query)
     elif(object in ['motor-i2c', 'i2c-motor', 'i2c-dc','dc-i2c']):
         id = command_separated[1]
+        print(id)
         speed = command_separated[2]
+        print(speed)
         motor = i2c_motor(id)
         motor.spin(speed)
 

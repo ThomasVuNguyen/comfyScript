@@ -1,23 +1,26 @@
 import sys
+import re
 
-paragraph  = sys.argv[1]
+paragraph = sys.argv[1]
 
 def split_string_with_punctuation(paragraph):
+    # Split the paragraph into sentences
+    sentences = re.split(r'(?<=[.!?])\s+', paragraph)
     result = []
-    current_word = ""
     
-    for char in paragraph:
-        if char in ".,":
-            if current_word:
-                result.append(current_word)
-                current_word = ""
-            result.append(char)
-        else:
-            current_word += char
+    for sentence in sentences:
+        # Split each sentence by commas, but keep float numbers intact
+        parts = re.split(r',\s*(?=(?:[^"]*"[^"]*")*[^"]*$)', sentence)
+        
+        for part in parts:
+            # Remove trailing periods
+            part = part.rstrip('.')
+            if part:
+                result.append(part.strip())
+        
+        # Add a period to mark the end of the sentence
+        result.append('.')
     
-    if current_word:
-        result.append(current_word)
-    #result in the form of command1 - , - command2 - . - command 3
     return result
 
 def create_multiple_lists(separated_paragraph):
@@ -29,7 +32,7 @@ def create_multiple_lists(separated_paragraph):
             if current_list:
                 result.append(current_list)
                 current_list = []
-        elif item != ',':
+        else:
             current_list.append(item)
     
     if current_list:
